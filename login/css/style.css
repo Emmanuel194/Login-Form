@@ -37,19 +37,21 @@ h1:after{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 15px;
+  border-radius: 22px;
   padding: 60px;
   align-items: center;
+  animation: iniciar 1.6s ease-out;
+  pointer-events: all;
 }
 
 
-.enviar{
+.btn{
   margin-top: 10%;
   width: 100%;
   text-align: center;
 }
 
-.enviar{
+.btn button{
   font-family: 'Poppins', sans-serif;
   background-color: #066a75;
   width: 100%;
@@ -62,10 +64,13 @@ h1:after{
   cursor: pointer;
 }
 
-.enviar:hover{
+
+.btn button:hover{
   background: #025d67;
   transition: 1s;
 }
+
+
 
 
 label{
@@ -76,9 +81,9 @@ label{
   min-width: 280px;
   border-radius: 22px;
   border: 2px #6f7e8a solid;
-  padding: 5px;
-  margin: 0px 0px 12px -5px;
-
+  padding: 2px;
+  outline: none;
+  
 }
 
 .input i{
@@ -94,4 +99,40 @@ label{
   transform: translateY(-10%);
   color: #066a75;
   font-size: 11pt;
+}
+
+
+.inscrever{
+ margin-top: 30px;
+ max-width: 100%;
+ text-decoration: none;
+}
+.inscrever label {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover{
+  color: dodgerblue;
+  transition: 1s all;
+}
+
+
+@keyframes iniciar{
+  0%{
+    top: -20%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  100%{
+    top: 50%;
+    opacity: 100%;
+    pointer-events: all;
+  }
 }

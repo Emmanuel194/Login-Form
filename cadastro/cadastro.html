@@ -6,26 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="cadastro.css">
   <script src="https://kit.fontawesome.com/69669bf030.js" crossorigin="anonymous"></script>
+  <script src="/cadastro/cadastro.js"></script>
   <title>Cadastro</title>
 </head>
 <body>
   <div id="form">
-    <form action="">
+    <form id="formulario" action="">
       <h2 class="title">Cadastrar</h2>
       <label for="username">Nome</label>
       <div class="input">
           <i class="fa-solid fa-user"></i>
-          <input id="username" name="username" placeholder="Username" type="text">
+          <input class="inputs required" id="username" name="username" placeholder="Username" type="text" oninput="nameValidate()">
       </div>
       <label for="email">Email</label>
       <div class="input">
           <i class="fa-solid fa-envelope"></i>
-          <input id="email" name="email" placeholder="Email" type="text">
+          <input class="inputs required" id="email" name="email" placeholder="Email" type="text">
       </div>
       <label for="senha">Senha</label>
       <div class="input">
           <i class="fa-solid fa-lock"></i>
-          <input id="senha" name="senha" placeholder="Senha" type="password">
+          <input class="inputs required" id="senha" name="senha" placeholder="Senha" type="password">
       </div>
       <div id="btn">
         <button type="button">Cadastrar</button>
