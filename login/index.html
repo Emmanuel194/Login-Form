@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/login/css/style.css" />
-    <script src="js/sgript.js"></script>
+    <script src="js/sgript.js" defer></script>
     <link rel="stylesheet" href="https://kit.fontawesome.com/69669bf030.css" crossorigin="anonymous">
     <title>Login</title>
   </head>
   <body>
     <div class="content">
-      <form action="">
+      <form action="" id="form">
         <h1>Login</h1>
-        <label for="email">Seu E-mail</label>
+        <label for="email">Seu Email</label>
         <div class="input">
           <i class="fa-solid fa-envelope"></i>
-          <input class="input" type="text" placeholder="Nome" id="login" />
+          <input class="input" type="text" placeholder="Nome" id="email" />
         </div>
         <label for="password">Sua Senha</label>
         <div class="input">
@@ -24,7 +24,7 @@
           <input class="input" type="password" placeholder="Senha" id="senha" />
         </div>
         <div class="btn">
-          <button type="button" onclick="logar(); return false">Enviar</button>
+          <button  type="submit" onclick="logar(); return false">Enviar</button>
         </div>
         <div class="inscrever">
           <label >Ainda não tem conta?</label>

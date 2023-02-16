@@ -1,21 +1,58 @@
-const form = document.getElementById('form');
-const campos = document.querySelectorAll('.required');
-const username = document.querySelectorAll('.username');
-const email = document.querySelectorAll('.email');
-const senha = document.querySelectorAll('.senha');
-var emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+const form = document.querySelector('#form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#senha');
 
-function setError(cadastro){
-  campos(cadastro).style.border = '1px solid #e63636';
+form.addEventListener("submit", (event) =>{
+
+  event.preventDefault();
+
+
+ // Verifica se o nome está vazio
+
+ if(nameInput.value === "") {
+  alert("Por favor , preencha o seu nome")
+  return;
+ }
+
+ // Verificar se o e-mail esta preenchido e se é valido
+
+ if(emailInput.value === "" || !isEmailValid(emailInput.value)) {
+  alert("Por favor , preencha o seu email")
+  return;
+ }
+
+ // Verificar se a senha está preenchida
+
+ if(!validatePassword(passwordInput.value, 8)) {
+  alert("A Senha precisa ser no mínimo obter 8 dígitos")
+  return;
+ }
+ // Se todos os campos estiverem corretamente preenchidos, evie o form
+
+ form.submit()
+});
+
+// Função que valida e-mail
+
+function isEmailValid(email) {
+  const emailRegex = new RegExp(
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+  );
+
+  if(emailRegex.test(email)) {
+    return true;
+  }
+  return false;
 }
 
-function nameValidate(){
-  if(campos[0].value.length < 3)
-  {
-    setError(0);
+// Função que valida a senha
+
+function validatePassword(password, minDigits) {
+  if(password.length >= minDigits) {
+    // Senha Válida
+    return true;
   }
-  else
-  {
-    console.log('Nome validado');
-  }
+   //Senha Inválida
+  return false;
 }
