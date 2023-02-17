@@ -1,5 +1,4 @@
 const form = document.querySelector('#form');
-const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#senha');
 
@@ -7,20 +6,8 @@ form.addEventListener("submit", (event) =>{
 
   event.preventDefault();
 
-
- // Verifica se o nome está vazio
-
- if(nameInput.value === "") {
-  swal({
-    title: "Ops!",
-    text: "Por favor , preencha o seu nome",
-    icon: "info",
-  });
   
-  return;
- }
-
- // Verificar se o e-mail esta preenchido e se é valido
+  // Verificar se o e-mail esta preenchido e se é valido
 
  if(emailInput.value === "" || !isEmailValid(emailInput.value)) {
   swal({
@@ -29,9 +16,9 @@ form.addEventListener("submit", (event) =>{
     icon: "info",
   });
   return;
- }
+  }
 
- // Verificar se a senha está preenchida
+  // Verificar se a senha está preenchida
 
  if(!validatePassword(passwordInput.value, 8)) {
   swal({
@@ -41,10 +28,14 @@ form.addEventListener("submit", (event) =>{
   });
   return;
  }
+
  // Se todos os campos estiverem corretamente preenchidos, evie o form
 
  form.submit()
-});
+
+})
+
+
 
 // Função que valida e-mail
 

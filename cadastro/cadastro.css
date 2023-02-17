@@ -102,3 +102,7 @@ alert{
     pointer-events: all;
   }
 }
+
+swal{
+  border-radius: 15px;
+}
