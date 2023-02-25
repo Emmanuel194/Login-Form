@@ -15,6 +15,7 @@ form.addEventListener("submit", (event) =>{
     text: "Por favor , preencha o seu email",
     icon: "info",
   });
+
   return;
   }
 
@@ -33,7 +34,7 @@ form.addEventListener("submit", (event) =>{
 
  form.submit()
 
-})
+});
 
 
 
