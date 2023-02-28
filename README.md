@@ -10,8 +10,8 @@
 </div>
 
 
-![preview](./.github/login.png)
-![preview](./.github/cadastro.png)
+![preview](./github/login.png)
+![preview](./github/cadastro.png)
 
 <div style="display: inline_block">
 
