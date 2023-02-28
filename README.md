@@ -25,4 +25,4 @@
 
 
 <h2>:bookmark_tabs: Descrição</h2>
-<p Tela de login + cadastro com validação em javascript</p>
+<p> Tela de login + cadastro com validação em javascript</p>
